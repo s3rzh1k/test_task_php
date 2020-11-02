@@ -7,8 +7,6 @@
                 $mytext = mb_convert_encoding($mytext, "UTF-8");
                 $array = explode("\x0A", $mytext);
                 array_pop($array);
-                foreach($array as $value) {
-                }
                 foreach($array as $key => $value) {
                     $array[$key] = explode("\t", $value);
                 };
