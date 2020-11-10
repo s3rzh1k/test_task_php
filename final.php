@@ -3,7 +3,7 @@
         $file = fopen($filename, 'r+');
         if ($file) {
             while (!feof($file)) {
-                $mytext = fgets($file, 4000);
+                $mytext = fgets($file);
                 $mytext = mb_convert_encoding($mytext, "UTF-8");
                 $array = explode("\x0A", $mytext);
                 array_pop($array);
